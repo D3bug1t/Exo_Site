@@ -1,0 +1,90 @@
+/* styles.css */
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Updated font family */
+    background-image: url('images/kai-pilger-Ef6iL87-vOA-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Text color changed to white */
+    margin: 0;
+    padding: 0;
+     /* Stop scrolling */
+}
+
+main {
+    padding: 50px;
+     /* Allow scrolling within main content */
+}
+
+.slide {
+    margin-top:20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Superficial black background */
+    padding: 20px; /* Add padding to create separation */
+    border-radius: 10px; /* Add rounded corners */
+}
+
+.slide h2 {
+    font-size: 24px;
+    margin-bottom: 10px; /* Add margin to separate headings from content */
+}
+
+.slide h3 {
+    font-size: 20px; /* Adjust subheading font size */
+    margin-top: 10px; /* Add margin to separate subheadings */
+    margin-left: 20px; /* Add an indent to the subheadings */
+}
+
+.slide.active {
+    display: block;
+}
+
+header {
+    text-align: center;
+    padding: 25px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2; /* Ensure header is above other elements */
+    background-color: rgba(0, 0, 0, 0.7); /* Add background for header */
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    font-family: 'Montserrat', sans-serif; /* Updated font family */
+    color: #fff; /* Text color changed to white */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Hover color changed to yellow */
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
