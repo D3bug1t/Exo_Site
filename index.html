@@ -37,18 +37,33 @@
         .mentor {
             display: flex;
             margin-bottom: 50px;
+            align-items: center; /* Center align mentor content vertically */
+            background-color:black; /* Background color for mentors */
+            padding: 20px; /* Add padding for better spacing */
+            border-radius: 10px; /* Add border radius for rounded corners */
         }
 
         .mentor img {
-            width: 200px;
-            height: auto;
+            width: 100px;
+            height: 100px;
             margin-right: 20px; /* Updated to margin-left */
-            border-radius: 50%;
+            border-radius: 10%; /*Make mentor image fully rounded */
         }
 
         .mentor-text {
             flex: 1;
-            margin-left: 20px; /* Added margin-right */
+        }
+
+        .mentor-text h3 {
+            font-size: 24px; /* Increase font size for mentor name */
+            color: wheat; /* Darken text color */
+            margin-bottom: 10px; /* Add spacing below mentor name */
+        }
+
+        .mentor-text p {
+            font-size: 18px; /* Increase font size for mentor description */
+            color: black; /* Darken text color */
+            line-height: 1.5; /* Adjust line height for better readability */
         }
     </style>
 </head>
@@ -86,31 +101,31 @@
         </section>
         <!-- Add more sections for other slides as needed -->
         <!-- About Section -->
-        <section id="about" class="slide">
+        <section id="about" class="slide" style="background-color: rgba(0,0,0,0.7);">
             <h2>About</h2>
             <!-- Mentor 1 -->
             <div class="mentor">
+                <img src="images/Ayush.jpg" alt="Mentor 1">
                 <div class="mentor-text">
-                    <h3>Mentor 1 Name</h3>
+                    <h3>Ayush SunilRao Bokad</h3>
                     <p>Description of Mentor 1...</p>
                 </div>
-                <img src="mentor1.jpg" alt="Mentor 1">
             </div>
             <!-- Mentor 2 -->
             <div class="mentor">
+                <img src="images/Sanskaar.jpg" alt="Mentor 2">
                 <div class="mentor-text">
-                    <h3>Mentor 2 Name</h3>
+                    <h3>Sanskaar Srivastava</h3>
                     <p>Description of Mentor 2...</p>
                 </div>
-                <img src="mentor2.jpg" alt="Mentor 2">
             </div>
             <!-- Mentor 3 -->
             <div class="mentor">
+                <img src="images/Abhivardhan.jpg" alt="Mentor 3">
                 <div class="mentor-text">
-                    <h3>Mentor 3 Name</h3>
+                    <h3>Abhi Abhivardhan</h3>
                     <p>Description of Mentor 3...</p>
                 </div>
-                <img src="mentor3.jpg" alt="Mentor 3">
             </div>
         </section>
     </main>
