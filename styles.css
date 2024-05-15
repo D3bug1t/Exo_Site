@@ -152,7 +152,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
-html { font-size:100%; }
+html { font-size:"10vw"; }
 
 /* Scroll to top button */
 .scroll-to-top {
@@ -176,4 +176,31 @@ html { font-size:100%; }
 .scroll-to-top:hover {
     background-color: #ffd633;
     color:black;
+}
+@media screen and (max-width: 375px) {
+    /* Adjustments for screens smaller than 375px */
+    .mentor {
+        flex-direction: column; /* Change flex direction to column */
+        align-items: center; /* Center align mentor content */
+    }
+
+    .mentor img {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add bottom margin for spacing */
+        width: 80px; /* Reduce image size */
+        height: 80px;
+        border-radius: 50%; /* Make image fully rounded */
+    }
+
+    .mentor-text {
+        text-align: center; /* Center align mentor text */
+    }
+
+    .mentor-text h3 {
+        font-size: 16px; /* Decrease font size for mentor name */
+    }
+
+    .mentor-text p {
+        font-size: 12px; /* Decrease font size for mentor description */
+    }
 }
