@@ -177,7 +177,7 @@ html { font-size:"10vw"; }
     background-color: #ffd633;
     color:black;
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
     /* Adjustments for screens smaller than 375px */
     .mentor {
         flex-direction: column; /* Change flex direction to column */
