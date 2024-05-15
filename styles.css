@@ -8,49 +8,97 @@ body {
     color: #fff; /* Text color changed to white */
     margin: 0;
     padding: 0;
-     /* Stop scrolling */
 }
 
 main {
     padding: 50px;
-     /* Allow scrolling within main content */
+    margin-top: 100px; /* Adjusted to accommodate header height */
+    margin-bottom: 50px; /* Adjusted to accommodate footer height */
 }
 
 .slide {
-    margin-top:20px;
     background-color: rgba(0, 0, 0, 0.7); /* Superficial black background */
     padding: 20px; /* Add padding to create separation */
     border-radius: 10px; /* Add rounded corners */
+    margin-bottom: 40px; /* Add margin to separate slides */
+    position: relative; /* Position relative for absolute positioning */
 }
 
 .slide h2 {
-    font-size: 24px;
-    margin-bottom: 10px; /* Add margin to separate headings from content */
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Add margin to separate headings from content */
+    color: #ffcc00; /* Heading color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for emphasis */
 }
 
 .slide h3 {
-    font-size: 20px; /* Adjust subheading font size */
-    margin-top: 10px; /* Add margin to separate subheadings */
-    margin-left: 20px; /* Add an indent to the subheadings */
+    font-size: 24px; /* Adjust subheading font size */
+    margin-top: 20px; /* Add margin to separate subheadings */
+    margin-bottom: 10px; /* Add margin to separate subheadings */
+    color: #fff; /* Subheading color */
 }
 
-.slide.active {
-    display: block;
+.slide p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd; /* Paragraph text color */
+}
+
+.comment-bar {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    width: calc(100% - 40px); /* Adjusted width */
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.comment-bar input[type="text"] {
+    flex: 1;
+    height: 100%;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+.comment-bar input[type="submit"] {
+    height: 100%;
+    background-color: #ffcc00; /* Button background color */
+    color: #222; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-bar input[type="submit"]:hover {
+    background-color: #ffd633; /* Button hover background color */
 }
 
 header {
     text-align: center;
-    padding: 25px 0;
-    position: fixed;
+    padding: 5px;
+    position: absolute;
+    top: 0;
     width: 100%;
     z-index: 2; /* Ensure header is above other elements */
     background-color: rgba(0, 0, 0, 0.7); /* Add background for header */
 }
 
 header h1 {
-    font-size: 48px;
+    font-size: 40px;
     font-weight: bold;
     text-transform: uppercase;
+    color: #fff; /* Header text color */
 }
 
 nav {
@@ -60,7 +108,7 @@ nav {
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 nav ul li {
@@ -80,7 +128,7 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #222;
+    background-color:black;
     color: #fff;
     text-align: center;
     padding: 20px 0;

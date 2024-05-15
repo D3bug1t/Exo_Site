@@ -3,41 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Your Project Name</title>
+    <title>Exo-Stellar Nexus</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for social media icons and mentors section */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+        }
+
+        .social-links img {
+            width: 30px;
+            height: auto;
+            filter: invert(1); /* Invert color of social media icons */
+        }
+
+        .mentor {
+            display: flex;
+            margin-bottom: 50px;
+        }
+
+        .mentor img {
+            width: 200px;
+            height: auto;
+            margin-right: 20px; /* Updated to margin-left */
+            border-radius: 50%;
+        }
+
+        .mentor-text {
+            flex: 1;
+            margin-left: 20px; /* Added margin-right */
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Exo-Stellar Nexus</h1>
         <nav>
             <ul>
-                <li><a href="#lecture-slide">Lecture Materials</a></li>
-                <li><a href="#assignment-slide">Assignments</a></li>
+                <li><a href="#lecture-notes">Lecture Notes</a></li>
+                <li><a href="#assignments">Assignments</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="dashboard">
-            <div class="slide" id="lecture-slide">
-                <h2>Lecture Materials</h2>
-                <h3>Week 1</h3>
-                <p>Insert lecture materials for Week 1 here.</p>
-                <h3>Week 2</h3>
-                <p>Insert lecture materials for Week 2 here.</p>
+        <section id="lecture-notes" class="slide">
+            <h2>Lecture Notes</h2>
+            <h3>Subheading 1</h3>
+            <p>Lecture notes content...</p>
+            <!-- Add comments here -->
+            <div class="comments">
+                <p>Additional information: </p>
+                <p>Your comments go here.</p>
             </div>
-            <div class="slide" id="assignment-slide">
-                <h2>Assignments</h2>
-                <h3>Assignment 1</h3>
-                <p>Insert details of Assignment 1 here.</p>
-                <h3>Assignment 2</h3>
-                <p>Insert details of Assignment 2 here.</p>
+        </section>
+        <section id="assignments" class="slide">
+            <h2>Assignments</h2>
+            <h3>Subheading 1</h3>
+            <p>Assignments content...</p>
+            <!-- Add comments here -->
+            <div class="comments">
+                <p>Additional information: </p>
+                <p>Your comments go here.</p>
+            </div>
+        </section>
+        <!-- Add more sections for other slides as needed -->
+        <!-- About Section -->
+        <section id="about" class="slide">
+            <h2>About</h2>
+            <!-- Mentor 1 -->
+            <div class="mentor">
+                <div class="mentor-text">
+                    <h3>Mentor 1 Name</h3>
+                    <p>Description of Mentor 1...</p>
+                </div>
+                <img src="mentor1.jpg" alt="Mentor 1">
+            </div>
+            <!-- Mentor 2 -->
+            <div class="mentor">
+                <div class="mentor-text">
+                    <h3>Mentor 2 Name</h3>
+                    <p>Description of Mentor 2...</p>
+                </div>
+                <img src="mentor2.jpg" alt="Mentor 2">
+            </div>
+            <!-- Mentor 3 -->
+            <div class="mentor">
+                <div class="mentor-text">
+                    <h3>Mentor 3 Name</h3>
+                    <p>Description of Mentor 3...</p>
+                </div>
+                <img src="mentor3.jpg" alt="Mentor 3">
             </div>
         </section>
     </main>
-
     <footer>
-        <p>&copy; 2024 Your Project Name. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/D3bug1t/Exo_Site"><img src="images/github-logo.png" alt="GitHub"></a>
+            <a href="https://www.facebook.com/AstroClubIITK/"><img src="images/facebook-logo.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/astroclub.iitk/"><img src="images/instagram-logo.png" alt="Instagram"></a>
+        </div>
+        <br>
+        <p><br>&copy; 2024 D3bug1t. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('header nav ul li a');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
