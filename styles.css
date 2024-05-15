@@ -152,6 +152,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+html { font-size:100%; }
 
 /* Scroll to top button */
 .scroll-to-top {
