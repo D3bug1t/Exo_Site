@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif; /* Updated font family */
-    background-image: url('images/kai-pilger-Ef6iL87-vOA-unsplash.jpg');
+    background-image: url('images/john-fowler-7Ym9rpYtSdA-unsplash.jpg');
     background-size: cover;
     background-position: center;
     color: #fff; /* Text color changed to white */
@@ -84,31 +84,38 @@ main {
     background-color: #ffd633; /* Button hover background color */
 }
 
+/* Header Styles */
 header {
     text-align: center;
-    padding: 5px;
-    position: absolute;
+    position: relative;
     top: 0;
+    left: 0;
     width: 100%;
-    z-index: 2; /* Ensure header is above other elements */
-    background-color: rgba(0, 0, 0, 0.7); /* Add background for header */
+    z-index: 1000;
+    background-color: rgba(0, 15, 0, 0.4); /* Dark background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    padding: 20px 0; /* Padding top and bottom */
 }
 
-header h1 {
-    font-size: 40px;
+/* Logo Styles */
+.logo {
+    font-family: 'Montserrat', sans-serif; /* Font family for logo */
+    font-size: 32px;
     font-weight: bold;
+    color: #fff; /* Text color */
     text-transform: uppercase;
-    color: #fff; /* Header text color */
+    letter-spacing: 2px; /* Increased letter spacing */
 }
 
+/* Navigation Styles */
 nav {
-    text-align: center;
+    margin-top: 10px; /* Adjust margin from logo */
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 10px;
+    padding: 0;
 }
 
 nav ul li {
@@ -117,22 +124,55 @@ nav ul li {
 }
 
 nav ul li a {
-    font-family: 'Montserrat', sans-serif; /* Updated font family */
-    color: #fff; /* Text color changed to white */
+    font-family: 'Montserrat', sans-serif; /* Font family for links */
+    color: #fff; /* Text color */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Hover color changed to yellow */
+    color: #ffcc00; /* Hover color */
+}
+ul li a{
+    font-family: 'Montserrat', sans-serif; /* Font family for links */
+    color: #fff; /* Text color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ul li a:hover{
+    color: #ffcc00;
 }
 
 footer {
-    background-color:black;
+    background-color:rgb(6, 0, 0);
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Scroll to top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #040404;
+    color: #fefdfd;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1001; /* Ensure button is above other content */
+    transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #ffd633;
+    color:black;
 }

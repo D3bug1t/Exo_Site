@@ -4,22 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exo-Stellar Nexus</title>
+    <link rel="icon" href="images/Astro-Club-logo.jpeg" type="images/ico">
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Additional CSS for social media icons and mentors section */
-        footer {
-            background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
+        
         .social-links {
             margin-top: 10px;
         }
@@ -65,11 +54,18 @@
             color: black; /* Darken text color */
             line-height: 1.5; /* Adjust line height for better readability */
         }
+
+        footer p {
+            margin-top: 10px; /* Add margin to separate from social links */
+        }
+
+        /* Button to scroll to top */
+        
     </style>
 </head>
 <body>
     <header>
-        <h1>Exo-Stellar Nexus</h1>
+        <h1 class="logo">Exo-Stellar Nexus</h1>
         <nav>
             <ul>
                 <li><a href="#lecture-notes">Lecture Notes</a></li>
@@ -81,22 +77,31 @@
     <main>
         <section id="lecture-notes" class="slide">
             <h2>Lecture Notes</h2>
-            <h3>Subheading 1</h3>
-            <p>Lecture notes content...</p>
+            <h3>Week 1</h3>
+            <ul>
+                <li><a href="https://docs.google.com/presentation/d/1GR-kUBSlT9aBzfCw31JR3m4BCjQ3bvxd/edit?usp=sharing&ouid=118201485570514880014&rtpof=true&sd=true" style="text-decoration:none">Intro To Astronomy</a></li>
+                <li><a href="https://docs.google.com/presentation/d/1U-Xydfls8_T9BemiFmu3xh5vyWQgwdOf/edit?usp=sharing&ouid=118201485570514880014&rtpof=true&sd=true" style="text-decoration:none">Evolution of Universe</a></li>
+                <li><a href="https://docs.google.com/presentation/d/1xueS7pD-NXWJpZWWWCmBnQZlP_5j0-t8/edit?usp=sharing&ouid=118201485570514880014&rtpof=true&sd=true" style="text-decoration:none">Life Cycle of A Star</a></li>
+                <li><a href="https://docs.google.com/presentation/d/1ie3tx6AmHmZ0-ynaxaMmzh9rquMTu7hH/edit?usp=sharing&ouid=118201485570514880014&rtpof=true&sd=true" style="text-decoration:none">After-Life of Stars</a></li>
+            </ul>
+            <h3>Week 2</h3>
+            <ul>
+                <li><a href="https://www.earth.com/earthpedia-articles/what-are-the-theories-of-the-universe/" style="text-decoration:none">Theories of the Universe</a></li>
+                <li><a href="https://www.snexplores.org/article/what-happened-since-big-bang-physics-universe-cosmic-timeline" style="text-decoration:none">Cosmic Timeline</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Stellar_evolution" style="text-decoration:none">Stellar Evolution</a></li>
+            </ul>
             <!-- Add comments here -->
             <div class="comments">
-                <p>Additional information: </p>
-                <p>Your comments go here.</p>
+                
             </div>
         </section>
         <section id="assignments" class="slide">
             <h2>Assignments</h2>
-            <h3>Subheading 1</h3>
+            <h3>Assignment 1</h3>
             <p>Assignments content...</p>
             <!-- Add comments here -->
             <div class="comments">
-                <p>Additional information: </p>
-                <p>Your comments go here.</p>
+                
             </div>
         </section>
         <!-- Add more sections for other slides as needed -->
@@ -135,11 +140,24 @@
             <a href="https://www.facebook.com/AstroClubIITK/"><img src="images/facebook-logo.png" alt="Facebook"></a>
             <a href="https://www.instagram.com/astroclub.iitk/"><img src="images/instagram-logo.png" alt="Instagram"></a>
         </div>
-        <br>
-        <p><br>&copy; 2024 D3bug1t. All rights reserved.</p>
+        <p>&copy; 2024 D3bug1t. All rights reserved.</p>
     </footer>
 
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" onclick="scrollToTop()">
+        &#8593;
+    </button>
+
     <script>
+        // Function to scroll to top of the page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Smooth scrolling for header links
         document.addEventListener('DOMContentLoaded', function() {
             const links = document.querySelectorAll('header nav ul li a');
             links.forEach(link => {
