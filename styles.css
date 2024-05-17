@@ -171,7 +171,7 @@ body {
     background-image: url('images/orion-nebula-11107.jpg');
     background-color: rgb(28, 95, 137);
     background-size:cover ;
-    background-position: absolute;
+    background-position: center;
     background-attachment: fixed;
     color: red; /* Text color changed to white */
     margin: 0;
@@ -275,6 +275,15 @@ main {
     }
     .header-right {
       float: none;
+    }
+    .hero-text p{
+        display:none;
+    }
+    .hero-text q{
+        display:none;
+    }
+    .next,.prev{
+        display: none;
     }
   }
 /* Logo Styles */
@@ -396,6 +405,9 @@ button:hover {
 }
 .slide p{
     text-align: left;
+ }
+ .social-links p{
+    text-align: center;
  }
 .team-cards {
     display: flex;
