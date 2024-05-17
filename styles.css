@@ -3,7 +3,7 @@
 /* styles.css */
 /* Fade-in effect */
 body {
-    animation: fadeInAnimation ease 1s;
+    animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -29,6 +29,10 @@ body {
     height: auto;
     filter: invert(1); /* Invert color of social media icons */
 }
+.social-links img:hover{
+    color:white;
+    /* filter: invert(0) */
+}
 /* Course-flow */
 * {
 	box-sizing: border-box;
@@ -41,7 +45,7 @@ course-flow {
 	padding: 1rem;
 	display: grid;
 	place-items: center;
-	min-height: 100vh;
+	min-height: 10vh;
 }
 
 ol {
@@ -65,8 +69,13 @@ ol::before {
 li {
 	padding: 0.5rem 1.5rem 1rem;
 	border-radius: 1.5rem;
-	background: white;
-    color:black
+	background:linear-gradient(45deg, rgb(242, 239, 239), rgb(248, 133, 239));;
+    color:black;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+li:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(247, 241, 241, 0.5);
 }
 
 li + li {
@@ -80,48 +89,14 @@ li + li {
 }
 /* Social Links */
 /* Mentor Section */
-.mentor {
-    font-size:"10vw";
-    display: flex;
-    margin-bottom: 50px;
-    align-items: center; /* Center align mentor content vertically */
-    background-color:black; /* Background color for mentors */
-    padding: 20px; /* Add padding for better spacing */
-    border-radius: 10px; /* Add border radius for rounded corners */
-}
-
-.mentor img {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px; /* Updated to margin-left */
-    border-radius: 10%; /*Make mentor image fully rounded */
-}
-
-.mentor-text {
-    font-size:10vw;
-    flex: 1;
-}
-
-.mentor-text h3 {
-    font-size: 24px; /* Increase font size for mentor name */
-    color: wheat; /* Darken text color */
-    margin-bottom: 10px; /* Add spacing below mentor name */
-}
-
-.mentor-text p {
-    font-size: 18px; /* Increase font size for mentor description */
-    color: black; /* Darken text color */
-    line-height: 1.5; /* Adjust line height for better readability */
-}
-
 footer p {
     margin-top: 10px; /* Add margin to separate from social links */
 }
 body {
-    font-family: 'Montserrat', sans-serif;/* Updated font family
-    /* background-image: url('images/john-fowler-7Ym9rpYtSdA-unsplash.jpg'); */
+    font-family: 'Montserrat', sans-serif;/* Updated font family*/
+    background-image: url('images/orion-nebula-11107.jpg');
     background-color: rgb(28, 95, 137);
-    background-size: cover;
+    background-size:contain ;
     background-position: center;
     color: red; /* Text color changed to white */
     margin: 0;
@@ -135,11 +110,16 @@ main {
 }
 
 .slide {
-    background-color: rgba(0, 0, 0, 0.5); /* Superficial black background */
+    background-color: rgba(130, 80, 131, 0.5); /* Superficial black background */
     padding: 20px; /* Add padding to create separation */
     border-radius: 10px; /* Add rounded corners */
     margin-bottom: 40px; /* Add margin to separate slides */
+    transition: transform 0.2s, box-shadow 0.2s;
     position: relative; /* Position relative for absolute positioning */
+}
+.slide:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(247, 241, 241, 0.5);
 }
 
 .slide h2 {
@@ -167,8 +147,10 @@ main {
 /* Style the header with a grey background and some padding */
 .header {
     overflow: hidden;
-    background-color:rgb(40, 146, 185);
+    background-color:rgba(0, 0, 0, 0.5);
     padding: 20px 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+
   }
   
   /* Style the header links */
@@ -191,9 +173,9 @@ main {
   
   /* Change the background color on mouse-over */
   .header a:hover {
-    background-color: white;
-    transition: 0.1ms;
-    color:rgb(40, 146, 185);
+    background:linear-gradient(45deg, rgb(84, 79, 79), rgb(248, 133, 239));
+    transition: 10ms;
+    color:rgb(246, 243, 242);
   }
   
   /* Style the active/current link*/
@@ -252,6 +234,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    
     color: green; /* Hover color */
 }
 ul li a{
@@ -261,7 +244,11 @@ ul li a{
     transition: color 0.3s;
 }
 ul li a:hover{
-    color: rgb(40, 146, 185);
+    color: rgb(179, 26, 34);
+   /* transform: translateY(-5px); */
+   /* box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); */
+
+
 }
 
 footer {
@@ -291,39 +278,12 @@ html { font-size:"10vw"; }
     text-align: match-parent;
     cursor: pointer;
     z-index: 1001; /* Ensure button is above other content */
-    transition:1.5s;
+    transition:0.2s;
 }
 
 .scroll-to-top:hover {
-    background-color: rgb(40, 146, 185);
-    color:black;
-}
-@media screen and (max-width: 500px) {
-    /* Adjustments for screens smaller than 375px */
-    .mentor {
-        flex-direction: column; /* Change flex direction to column */
-        align-items: center; /* Center align mentor content */
-    }
-
-    .mentor img {
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 10px; /* Add bottom margin for spacing */
-        width: 80px; /* Reduce image size */
-        height: 80px;
-        border-radius: 50%; /* Make image fully rounded */
-    }
-
-    .mentor-text {
-        text-align: center; /* Center align mentor text */
-    }
-
-    .mentor-text h3 {
-        font-size: 16px; /* Decrease font size for mentor name */
-    }
-
-    .mentor-text p {
-        font-size: 12px; /* Decrease font size for mentor description */
-    }
+    background-color: rgba(33, 32, 32, 0.756);
+    color:white;
 }
 
 button {
@@ -366,7 +326,7 @@ button:hover {
 }
  
 .card {
-    background-color: white;
+    background:linear-gradient(45deg, rgb(242, 239, 239), rgb(248, 133, 239));
     border-radius: 6px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     overflow: hidden;
@@ -399,7 +359,7 @@ button:hover {
 .card-name {
     font-size: 2rem;
     margin: 10px 0;
-    color:rgb(30, 103, 103)
+    color:rgb(62, 21, 2)
 }
  
 .card-role {
@@ -411,4 +371,97 @@ button:hover {
 .card-email {
     font-size: 1rem;
     color: #555;
+}
+/* Slide Show */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin:0;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    position: absolute;
+    right: 10px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.myslides.img{
+    height:250px;
+    width:100%;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
