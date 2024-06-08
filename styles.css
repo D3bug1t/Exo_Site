@@ -153,7 +153,6 @@ li:hover{
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(247, 241, 241, 0.5);
     background:linear-gradient(45deg, rgba(242, 239, 239,1), rgba(245, 171, 239,1));;
-
 }
 
 li + li {
