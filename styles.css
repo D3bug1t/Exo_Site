@@ -143,13 +143,17 @@ li {
     animation-fill-mode: forwards;
 	padding: 0.5rem 1.5rem 1rem;
 	border-radius: 1.5rem;
-	background:linear-gradient(45deg, rgb(242, 239, 239), rgb(245, 171, 239));;
+	background:linear-gradient(45deg, rgba(242, 239, 239,0.7), rgba(245, 171, 239,0.7));;
     color:black;
     transition: transform 0.2s, box-shadow 0.2s;
+    max-width:auto;
 }
 li:hover{
+    transition: transform 0.2s;
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(247, 241, 241, 0.5);
+    background:linear-gradient(45deg, rgba(242, 239, 239,1), rgba(245, 171, 239,1));;
+
 }
 
 li + li {
@@ -186,7 +190,7 @@ main {
 }
 
 .slide {
-    background-color: rgba(130, 80, 131, 0.5); /* Superficial black background */
+    background-color: rgba(47, 4, 47, 0.5); /* Superficial black background */
     padding: 20px; /* Add padding to create separation */
     border-radius: 10px; /* Add rounded corners */
     margin-bottom: 40px; /* Add margin to separate slides */
