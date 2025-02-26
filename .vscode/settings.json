@@ -4,6 +4,13 @@
     "cmath": "cpp",
     "bitset": "cpp",
     "set": "cpp",
-    "cstdlib": "cpp"
+    "cstdlib": "cpp",
+    "deque": "cpp",
+    "string": "cpp",
+    "vector": "cpp",
+    "random": "cpp",
+    "chrono": "cpp",
+    "limits": "cpp",
+    "valarray": "cpp"
   }
 }
